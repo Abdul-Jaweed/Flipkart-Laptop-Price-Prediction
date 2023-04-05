@@ -103,6 +103,7 @@
 
 
 
+
 name: workflow
 
 on:
@@ -193,7 +194,7 @@ jobs:
          
       - name: Stop and remove container if running
         run: |
-         docker ps -q --filter "name=laptop-app" | grep -q . && docker stop laptop-app && docker rm -fv laptop-app || true
+         docker ps -q --filter "name=laptop-app" | grep -q . && docker stop laptop-app && docker rm -fv laptop-app
        
       - name: Run Docker Image to serve users
         run: |
