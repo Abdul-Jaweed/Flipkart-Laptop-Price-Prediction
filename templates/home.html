@@ -1,0 +1,272 @@
+
+<html>
+    <head>
+        <title>Laptop Price Prediction</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+          }
+          h1 {
+            color: #1a1a1a;
+            text-align: center;
+            margin-top: 50px;
+          }
+          p {
+            color: #333;
+            font-size: 24px;
+            text-align: center;
+            margin-top: 30px;
+          }
+
+          form {
+            width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            text-align: center;
+          }
+          
+          /* Style the form labels */
+          form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+          }
+          
+          /* Style the button */
+          form button {
+            display: inline-block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          
+          form button:hover {
+            background-color: #2980b9;
+          }
+          
+
+
+
+        </style>
+      </head>
+<body>
+    <div class="login">
+       <!-- <h1>Innomatics Research Lab</h1> -->
+   
+       <!-- <form action="{{ url_for('home')}}" method="post"> -->
+        <form action="/predict" method="post">
+        <h1>
+            <legend>Flipkart Laptop Price Prediction</legend>
+        </h1>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">Brand Name</label>
+            <select class="form-control" id="Brand Name" name="Brand Name" placeholder="Enter the Brand Name" required>
+                <option class="placeholder" selected disabled value="">Enter the Brand Name</option>
+                <option value="ASUS">
+                    ASUS
+                </option>
+                <option value="Lenovo">
+                    Lenovo
+                </option>
+                <option value="Lenovo">
+                    Lenovo
+                </option>
+                <option value="DELL">
+                    DELL
+                </option>
+                <option value="HP">
+                    HP
+                </option>
+                <option value="acer">
+                    acer
+                </option>
+                <option value="RedmiBook">
+                    RedmiBook
+                </option>
+                <option value="MSI">
+                    MSI
+                </option>
+                <option value="Infinix">
+                    Infinix
+                </option>
+                <option value="APPLE">
+                    APPLE
+                </option>
+                <option value="Others">
+                    Others
+                </option>
+            </select>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">Operating System (OS)</label>
+            <select class="form-control" id="OS" name="OS" placeholder="Enter the OS" required>
+                <option class="placeholder" selected disabled value="">OS</option>
+                <option value="Windows">
+                    Windows
+                </option>
+                <option value="Mac">
+                    Mac
+                </option>
+                <option value="Others">
+                    Others
+                </option>
+            </select>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">Ram Type</label>
+            <select class="form-control" id="Ram Type" name="Ram Type"
+                placeholder="Enter the Ram Type" required>
+                <option class="placeholder" selected disabled value="">Select the Ram Type</option>
+                <option value="DDR4">
+                    DDR4
+                </option>
+                <option value="DDR5">
+                    DDR5
+                </option>
+                <option value="Others">
+                    Others
+                </option>
+            </select>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">RAM</label>
+            <select class="form-control" id="RAM" name="RAM" placeholder="Enter the RAM" required>
+                <option class="placeholder" selected disabled value="">Select the RAM</option>
+                <option value="4">
+                    4
+                </option>
+                <option value="8">
+                    8
+                </option>
+                <option value="16">
+                    16
+                </option>
+                <option value="32">
+                    32
+                </option>
+            </select>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">Processor</label>
+            <select class="form-control" id="Processor" name="Processor" placeholder="Enter the Processor"
+                required>
+                <option class="placeholder" selected disabled value="">Select the Processor</option>
+                <option value="Intel">
+                    Intel
+                </option>
+                <option value="AMD">
+                    AMD
+                </option>
+                <option value="Others">
+                    Others
+                </option>
+            </select>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">GPU</label>
+            <select class="form-control" id="GPU" name="GPU" placeholder="Enter the GPU"
+                required>
+                <option class="placeholder" selected disabled value="">Select the GPU</option>
+                <option value="Intel">
+                    Intel
+                </option>
+                <option value="AMD">
+                    AMD
+                </option>
+                <option value="NVIDIA">
+                    NVIDIA
+                </option>
+                <option value="Others">
+                    Others
+                </option>
+            </select>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">Warranty</label>
+            <select class="form-control" id="Warranty" name="Warranty" placeholder="Enter the Warranty"
+                required>
+                <option class="placeholder" selected disabled value="">Select the Warranty</option>
+                <option value="1">
+                    1
+                </option>
+                <option value="2">
+                    2
+                </option>
+            </select>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">ScreenSize</label>
+            <select class="form-control" id="ScreenSize" name="ScreenSize" placeholder="Enter the ScreenSize"
+                required>
+                <option class="placeholder" selected disabled value="">Select the ScreenSize</option>
+                <option value="15.60">
+                    15.60
+                </option>
+                <option value="14.00">
+                    14.00
+                </option>
+            </select>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">Disk Type</label>
+            <select class="form-control" id="Disk Type" name="Disk Type" placeholder="Enter the Disk Type"
+                required>
+                <option class="placeholder" selected disabled value="">Select the Disk Type</option>
+                <option value="SSD">
+                    SSD
+                </option>
+                <option value="HDD">
+                    HDD
+                </option>
+            </select>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">DISK SIZE</label>
+            <select class="form-control" id="DISK SIZE" name="DISK SIZE" placeholder="Enter the DISK SIZE"
+                required>
+                <option class="placeholder" selected disabled value="">Select the DISK SIZE</option>
+                <option value="128">
+                    128
+                </option>
+                <option value="256">
+                    256
+                </option>
+                <option value="512">
+                    512
+                </option>
+                <option value="1024">
+                    1024
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <br>
+            <br>
+            <input class="btn btn-primary" type="submit" value="Predict The Laptop Price" required />
+        </div>
+    <!-- </form> -->
+    <!-- <h2>
+        Laptop Predicted Price is ₹ {{results}}
+    </h2> -->
+    </form>
+   <body>
+</html>
