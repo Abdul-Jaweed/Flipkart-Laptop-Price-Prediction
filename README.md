@@ -1,1 +1,1 @@
-# Flipkart-Laptop-Price-Prediction
+# Flipkart Laptop Price Prediction
