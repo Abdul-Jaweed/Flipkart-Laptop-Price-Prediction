@@ -2,8 +2,6 @@ sklearn
 # flask
 numpy
 # uvicorn
-# Jinja2==2.11.2
-
 Flask==1.1.2
 ifaddr==0.1.7
 itsdangerous==1.1.0
